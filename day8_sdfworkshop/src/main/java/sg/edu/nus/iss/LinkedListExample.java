@@ -25,7 +25,6 @@ public class LinkedListExample {
         ll.removeFirst();
         ll.removeLast();
         System.out.println(ll); 
-
     }
     
 }
