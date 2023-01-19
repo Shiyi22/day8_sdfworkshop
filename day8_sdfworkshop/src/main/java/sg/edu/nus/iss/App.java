@@ -1,5 +1,7 @@
 package sg.edu.nus.iss;
 
+import java.util.LinkedList;
+
 /**
  * Hello world!
  */
@@ -25,6 +27,9 @@ public final class App {
         // hme.example();
 
         ConcurrentHashMapExample che = new ConcurrentHashMapExample(); 
-        che.example();
+        //che.example();
+
+        LinkedListExample lle = new LinkedListExample(); 
+        lle.example();
     }
 }
