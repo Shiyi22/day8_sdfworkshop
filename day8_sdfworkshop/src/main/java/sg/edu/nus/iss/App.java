@@ -41,12 +41,12 @@ public final class App {
 
 
         // // File IO revision 
-        String dirPath = "c:\\Users\\yeosh\\src\\day8\\day8_sdfworkshop\\src\\main\\java\\sg\\edu\\nus\\iss\\data"; 
+        String dirPath = "data"; 
         String fileName = "data.txt"; 
 
         // create a directory
         File newDir = new File(dirPath); 
-        FileWriter fw = new FileWriter(newDir); 
+        // FileWriter fw = new FileWriter(newDir); 
         boolean isDirCreated = newDir.mkdir(); 
         
         if (isDirCreated)
@@ -56,7 +56,7 @@ public final class App {
 
         // create a file in the directory created above 
         File newFile = new File(dirPath + File.separator + fileName); 
-        System.out.println(newFile);
+        // System.out.println(newFile);
         boolean isFileCreated = newFile.createNewFile(); 
 
         if (isFileCreated)
@@ -68,22 +68,23 @@ public final class App {
         File fileList[] = newDir.listFiles();
         for (File f: fileList) {
             System.out.println("File " + f.getPath() + f.getCanonicalFile());
-        }
 
-        // use FileOutputStream to write 
-        FileOutputStream fos = new FileOutputStream(newFile, true);
-        for (int i = 0; i < 10; i++) {
-            char str[] = Character.toString(i).toCharArray();
-            fos.write(str[0]);
-            fos.write('\n');
-        }
-        // convert string to byte array using getBytes() function 
-        String welcomeMessage = "Welcome to ISS TFIP programmme"; 
-        byte outputData[] = welcomeMessage.getBytes(); // convert to byte as fos.write takes in byte 
-        fos.write(outputData); // writing the string in byte array one character at a time to the file 
+            // use FileOutputStream to write 
+            FileOutputStream fos = new FileOutputStream(newFile, true);
+            for (int i = 0; i < 10; i++) {
+                char str[] = Integer.toString(i).toCharArray();
+                fos.write(str[0]);
+                fos.write('\n');
+            }
+            // convert string to byte array using getBytes() function 
+            String welcomeMessage = "Welcome to ISS TFIP programmme"; 
+            byte outputData[] = welcomeMessage.getBytes(); // convert to byte as fos.write takes in byte 
+            fos.write(outputData); // writing the string in byte array one character at a time to the file 
 
-        // clear the outputstream >> force data to store to the file destination 
-        fos.flush();
-        fos.close();
+            // clear the outputstream >> force data to store to the file destination 
+            fos.flush();
+            fos.close();
+        }
+        
     }
 }
