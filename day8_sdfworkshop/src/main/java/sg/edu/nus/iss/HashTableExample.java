@@ -1,14 +1,14 @@
 package sg.edu.nus.iss;
 
 import java.io.Console;
-import java.util.HashMap;
+import java.util.Hashtable;
 import java.util.Map;
 
-public class HashMapExample {
-
+public class HashTableExample {
+    // replicating HashMap example 
     public void example() {
-
-        Map<String, Integer> phones = new HashMap<>(); // map out the demographics 
+        
+        Map<String, Integer> phones = new Hashtable<>(); // map out the demographics 
 
         phones.put("iPhone", 10); // 10 person has iPhone 
         phones.put("Huawei",2);
@@ -36,7 +36,5 @@ public class HashMapExample {
         }
         // once program exits, remove all the map data in memory 
         phones.clear(); 
-
     }
-    
 }

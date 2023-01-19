@@ -19,7 +19,9 @@ public final class App {
 
         CollectionSortExample cse = new CollectionSortExample(); 
         // cse.example();
-        cse.example2();
+        // cse.example2();
 
+        HashMapExample hme = new HashMapExample(); 
+        hme.example();
     }
 }
