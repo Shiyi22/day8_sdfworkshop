@@ -22,6 +22,9 @@ public final class App {
         // cse.example2();
 
         HashMapExample hme = new HashMapExample(); 
-        hme.example();
+        // hme.example();
+
+        ConcurrentHashMapExample che = new ConcurrentHashMapExample(); 
+        che.example();
     }
 }
